@@ -1,4 +1,4 @@
-package domashka5;
+package domashka5_string;
 import java.util.Scanner;
 
 public class Task2 {

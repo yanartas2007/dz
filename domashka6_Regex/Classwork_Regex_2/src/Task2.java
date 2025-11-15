@@ -1,4 +1,4 @@
-package Classwork_Regex_2.src;
+package domashka6_Regex.Classwork_Regex_2.src;
 
 import java.util.regex.*;
 

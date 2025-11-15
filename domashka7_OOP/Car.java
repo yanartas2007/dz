@@ -1,4 +1,4 @@
-package domashka7;
+package domashka7_OOP;
 
 public class Car {
     private String brand;
