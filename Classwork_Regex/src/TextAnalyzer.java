@@ -1,4 +1,4 @@
-package domashka6_Regex;
+package Classwork_Regex.src;
 import java.util.Scanner;
 
 public class TextAnalyzer {
