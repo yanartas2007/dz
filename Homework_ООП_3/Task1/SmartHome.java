@@ -1,7 +1,5 @@
 package Homework_ООП_3.Task1;
 
-import domashka8_inkapsulation_OOPstudents.students.Student;
-
 public class SmartHome {
     private String homeName;
     private SmartDevice[] devices;

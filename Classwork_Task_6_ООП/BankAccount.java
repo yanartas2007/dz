@@ -1,4 +1,4 @@
-package Classwork_Task_6_ООП.domashka7_OOP;
+package Classwork_Task_6_ООП;
 
 public class BankAccount {
     private String accountNumber;

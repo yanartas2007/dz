@@ -1,4 +1,4 @@
-package domashka8_inkapsulation_OOPstudents.students;
+package Homework_ООП_Студенты;
 
 public class Course {
     private String courseCode;

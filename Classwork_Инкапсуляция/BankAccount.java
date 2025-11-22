@@ -1,4 +1,4 @@
-package domashka8_inkapsulation_OOPstudents.inkapsulation;
+package Classwork_Инкапсуляция;
 
 public class BankAccount {
     private String accountNumber;

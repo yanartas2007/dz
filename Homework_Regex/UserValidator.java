@@ -1,4 +1,4 @@
-package domashka6_Regex;
+package Homework_Regex;
 import java.util.Scanner;
 
 public class UserValidator {

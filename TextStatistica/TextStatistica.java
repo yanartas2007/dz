@@ -1,4 +1,4 @@
-package domashka6_Regex;
+package TextStatistica;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
