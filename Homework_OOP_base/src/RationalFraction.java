@@ -20,7 +20,7 @@ public class RationalFraction {
     public void reduce() {
         while (true) {
             boolean flag = false;
-            for (int i = 1; i < (a < b ? a : b); i++) {
+            for (int i = 2; i < (a < b ? a : b); i++) {
                  if (a % i == 0 && b % i == 0) {
                      a = a / i;
                      b = b / i;
@@ -94,6 +94,7 @@ public class RationalFraction {
 
     public void setA(int a) {
         this.a = a;
+        reduce();
     }
 
     public int getB() {
@@ -102,5 +103,6 @@ public class RationalFraction {
 
     public void setB(int b) {
         this.b = b;
+        reduce();
     }
 }
