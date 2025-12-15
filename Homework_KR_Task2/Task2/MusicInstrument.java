@@ -1,6 +1,6 @@
 package Homework_KR_Task2.Task2;
 
-public abstract class MusicInstrument {
+public class MusicInstrument {
     private String tonality;
 
     public MusicInstrument(String tonality) {
@@ -11,7 +11,9 @@ public abstract class MusicInstrument {
         this("Неизвестно");
     }
 
-    public abstract void playMusic();
+    public void playMusic() {
+        System.out.println("трыньк");
+    }
 
     public String getTonality() {
         return tonality;

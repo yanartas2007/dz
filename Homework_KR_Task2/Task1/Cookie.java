@@ -1,6 +1,6 @@
 package Homework_KR_Task2.Task1;
 
-public abstract class Cookie { // пирог
+public abstract class Cookie {
     private int calories;
 
     public Cookie(int calories) {

@@ -16,9 +16,7 @@ public class CookieManager {
         return bakeCookie(type, 0, 0);
     }
 
-
-
-    public static boolean equals(String a, String b) {
+    private static boolean equals(String a, String b) {
         if (a.length() != b.length())  {
             return false;
         }
