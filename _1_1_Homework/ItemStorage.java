@@ -1,6 +1,6 @@
 package _1_1_Homework;
 
-public class ItemStorage<T> {
+public class ItemStorage<T>{
     private T value;
 
     public ItemStorage(T value) {
@@ -15,8 +15,8 @@ public class ItemStorage<T> {
             System.out.println("Опачки! Ревизия невозможна, объект не найден");
         }
         else
-        {        System.out.println(value.equals(otherValue));
-            if (value == otherValue) { // сравнивает по объекту, а не по значению. это понятно из теста b
+        {        System.out.println(this.getValue().equals(otherValue)); // сравнивает по значению
+            if (getValue() == otherValue) { // сравнивает по объекту
             System.out.println("Значения идентичны. Контроль качества пройден");
         }}
     }
