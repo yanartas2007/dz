@@ -36,7 +36,7 @@ public class Main {
         rh2.register(rf1);
         rh2.adjustRurity(10, 0.5);
         System.out.println(rh2.getAveragePurity());
-        // 0.5 + 50 + 1/2 = 51;      51 + 10 * 3 = 81;    81 * 0.5 = 40.5
+        // 0.5 + 50 + 1/2 = 51;      51 + 10 * 3 = 81;    81 * 0.5 = 40.5;     40.5 / 3 = 13.5
         // сложностей не возникло
 
         System.out.println("!4");

@@ -86,12 +86,14 @@ public class ResearchHub<S extends LaboratoryItem> {
 
     public double getAveragePurity() {
         double ans = 0;
+        int count = 0;
         for (S i: getStorage()) {
             if (i instanceof ResearchSample) {
+                count++;
                 ans += ((ResearchSample<?>) i).getPurity().doubleValue();
             }
         }
-        return ans;
+        return ans / (count != 0 ? count : 1);
     }
 
 
