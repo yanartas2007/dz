@@ -1,14 +1,15 @@
-package _1_2_Homework;
+package Homework4;
 
-import java.util.Objects;
+import _1_2_Homework.LaboratoryItem;
+import _1_2_Homework.ResearchSample;
 
-public class ResearchHub<S extends LaboratoryItem> {
-    private S[] storage;
+public class ResearchHub_withList<S extends LaboratoryItem> {
+    private MyArrayList<S> storage;
     private int count;
 
     // есть ощущение, что это god object
 
-    public ResearchHub(S[] storage, int count) {
+    public ResearchHub_withList(MyArrayList<S> storage, int count) {
         setStorage(storage);
         setCount(count);
         update();
@@ -18,8 +19,8 @@ public class ResearchHub<S extends LaboratoryItem> {
     public void register(S item) {
         update();
         for (int i = 0; i < count; i++) {
-            if (storage[i] == null) {
-                storage[i] = item;
+            if (storage.getMassive()[i] == null) {
+                storage.set(i, item);
                 break;
             }
         }
@@ -29,10 +30,10 @@ public class ResearchHub<S extends LaboratoryItem> {
     public S release(int index) {
         S ans = null;
         try {
-            S[] storage1 = getStorage();
+            S[] storage1 = getStorage().getMassive();
             ans = storage1[index];
             storage1[index] = null;
-            setStorage(storage1);
+            storage.setMassive(storage1);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.print("неверный индекс ");
             System.out.println(index);
@@ -42,7 +43,7 @@ public class ResearchHub<S extends LaboratoryItem> {
 
     private void update() { // проверяет на заполненность и если заполнено, увеличивает storage
         for (int i = 0; i < getCount(); i++) {
-            if (getStorage()[i] == null) {
+            if (getStorage().getMassive()[i] == null) {
                 return;
             }
         }
@@ -50,15 +51,15 @@ public class ResearchHub<S extends LaboratoryItem> {
         setCount(getCount() * 2);
         S[] newStorage = (S[]) new LaboratoryItem[getCount()];
         for (int i = 0; i < oldCount; i++) {
-            newStorage[i] = getStorage()[i];
+            newStorage[i] = getStorage().getMassive()[i];
         }
-        setStorage(newStorage);
+        storage.setMassive(newStorage);
         update();
     }
 
     public int indexOf(S item) {
         for (int i = 0; i < count; i++) {
-            if (storage[i] == item) {
+            if (storage.getMassive()[i] == item) {
                 return i;
             }
         }
@@ -67,7 +68,7 @@ public class ResearchHub<S extends LaboratoryItem> {
     }
 
     public void clearByHazardLevel(int limit) {
-        for (S i: getStorage()) {
+        for (S i: getStorage().getMassive()) {
             if (i != null) {
                 if (i.getBiohazardLevel() > limit) {
                     release(indexOf(i));
@@ -77,7 +78,7 @@ public class ResearchHub<S extends LaboratoryItem> {
     }
 
     public void adjustRurity(Number offset, Number multipler) {
-        for (S i: getStorage()) {
+        for (S i: getStorage().getMassive()) {
             if (i instanceof ResearchSample) {
                 ((ResearchSample<?>) i).setPurity((((ResearchSample) i).getPurity().doubleValue() + offset.doubleValue()) * multipler.doubleValue());
             }
@@ -87,7 +88,7 @@ public class ResearchHub<S extends LaboratoryItem> {
     public double getAveragePurity() {
         double ans = 0;
         int count = 0;
-        for (S i: getStorage()) {
+        for (S i: getStorage().getMassive()) {
             if (i instanceof ResearchSample) {
                 count++;
                 ans += ((ResearchSample<?>) i).getPurity().doubleValue();
@@ -97,11 +98,11 @@ public class ResearchHub<S extends LaboratoryItem> {
     }
 
 
-    public S[] getStorage() {
+    public MyArrayList<S> getStorage() {
         return storage;
     }
 
-    public void setStorage(S[] storage) {
+    public void setStorage(MyArrayList<S> storage) {
         this.storage = storage;
     }
 

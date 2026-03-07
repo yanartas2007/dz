@@ -1,5 +1,7 @@
 package _1_2_Homework;
 
+import Homework4.ResearchHub_withList;
+
 public class LabUnits {
     public static LaboratoryItem findMaxBiohazardLevel(LaboratoryItem[] massive) {
         int maxbh = 0;
@@ -40,7 +42,7 @@ public class LabUnits {
 
     }
 
-    public static boolean checkResearchHubs(ResearchHub<?> r1, ResearchHub<?> r2) {
+    public static boolean checkResearchHubs(ResearchHub_withList<?> r1, ResearchHub_withList<?> r2) {
         return r1.getStorage().getClass().isInstance(r2.getStorage());
     }
 

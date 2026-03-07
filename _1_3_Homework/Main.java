@@ -1,15 +1,17 @@
 package _1_3_Homework;
 
+import Homework4.CargoBay_withList;
+
 public class Main {
     public static void main(String[] args) {
         // 1. Создаем отсеки
-        CargoBay<Phone> phoneBay = new CargoBay<>(10);
+        CargoBay_withList<Phone> phoneBay = new CargoBay_withList<>(10);
         phoneBay.add(new Phone("iPhone 15"));
         phoneBay.add(new Phone("Samsung S24"));
 
-        CargoBay<Electronics> electronicsBay = new CargoBay<>(10);
-        CargoBay<Cargo> generalCargoBay = new CargoBay<>(20);
-        CargoBay<Food> foodBay = new CargoBay<>(10);
+        CargoBay_withList<Electronics> electronicsBay = new CargoBay_withList<>(10);
+        CargoBay_withList<Cargo> generalCargoBay = new CargoBay_withList<>(20);
+        CargoBay_withList<Food> foodBay = new CargoBay_withList<>(10);
 
         // ==========================================
         // ПРОВЕРКА 1: inspectCargo (Producer Extends)
