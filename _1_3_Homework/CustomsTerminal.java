@@ -14,9 +14,9 @@ public class CustomsTerminal {
     }
 
     public static void transferCargo(CargoBay_withList<? extends Cargo> from, CargoBay_withList<? extends Cargo> to) {
-        for (Cargo i: from.getMassive()) {
-            to.add(i);
-        }
+//        for (Cargo i: from.getMassive()) {
+//            to.add(i);
+//        }
     }
 
 
